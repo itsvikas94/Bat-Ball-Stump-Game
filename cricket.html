@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket Game</title>
+    <style>
+      main {
+        text-align: center;
+        height: 50vh;
+        width: 50vw;
+        background-color: beige;
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: 5px;
+        color: rgb(75, 80, 107);
+      }
+      h1{
+        size: 5rem;
+      }
+      button{
+        font-size: large;
+        padding: 5px 20px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Bat Ball Stump Game</h1>
+      <button
+        onclick="
+      let rnum=Math.random()*3;
+       compChoice;
+      if(rnum>0 && rnum <=1){
+       compChoice='Bat';
+      }
+        else if(rnum>1 && rnum<=2){
+            compChoice='Ball';
+        }else{
+            compChoice='Stump';   
+        }
+
+        resultMsg;
+        if(compChoice==='Ball'){
+            resultMsg='User Won'
+        }else if(compChoice==='Bat'){
+           resultMsg=`It's a tie`;
+        }else if(compChoice==='Stump'){
+            resultMsg='Computer has Won.';
+        }
+        // alert(`You have chosen Bat. Computer choice is ${compChoice} and ${resultMsg}`);
+        document.querySelector('#msg').innerHTML=`You have chosen Bat. Computer choice is ${compChoice} and ${resultMsg}`;
+       "
+      >
+        Bat
+      </button>
+
+      <button
+        onclick="
+      rnum=Math.random()*3;
+      compChoice;
+      if(rnum>0 && rnum <=1){
+       compChoice='Bat';
+      }
+        else if(rnum>1 && rnum<=2){
+            compChoice='Ball';
+        }else{
+            compChoice='Stump';   
+        }
+        resultMsg;
+        if(compChoice==='Ball'){
+            resultMsg=`It's a tie`;
+        }else if(compChoice==='Bat'){
+           resultMsg='Computer has Won';
+        }else if(compChoice==='Stump'){
+            resultMsg='User Won.';
+        }
+        // alert(`You have chosen Ball. Computer choice is ${compChoice} and ${resultMsg}`);
+        document.querySelector('#msg').innerHTML=`You have chosen Ball. Computer choice is ${compChoice} and ${resultMsg}`;
+
+       "
+      >
+        Ball
+      </button>
+
+      <button onclick="
+      rnum=Math.random()*3;
+      compChoice;
+      if(rnum>0 && rnum <=1){
+       compChoice='Bat';
+      }
+        else if(rnum>1 && rnum<=2){
+            compChoice='Ball';
+        }else{
+            compChoice='Stump';   
+        }
+        resultMsg;
+        if(compChoice==='Ball'){
+            resultMsg='Computer has Won';
+        }else if(compChoice==='Bat'){
+           resultMsg='User Won.';
+        }else if(compChoice==='Stump'){
+            resultMsg=`It's a tie`;
+        }
+        // alert(`You have chosen Stump. Computer choice is ${compChoice} and ${resultMsg}`);
+        document.querySelector('#msg').innerHTML=`You have chosen Stump. Computer choice is ${compChoice} and ${resultMsg}`;
+       ">Stump</button>
+
+       <h2 id="msg"></h2>
+      <script>
+        let compChoice;
+        let resultMsg;
+      </script>
+    </main>
+  </body>
+</html>
